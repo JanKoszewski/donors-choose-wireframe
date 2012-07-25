@@ -10,15 +10,12 @@ class ProjectsController < ApplicationController
       project = Project.from_donors_choose_url(url)
       if project.new_record?
         project.set_attrs_from_donors_choose(url)
-        redirect_to new_project_challenge_path(:project_id => project.id)
-        flash[:notice] = t(:new_project)
+        redirect_to new_project_challenge_path(:project_id => project.id), flash[:notice] = t(:new_project)
       else
-        redirect_to project_path(project)
-        flash[:notice] = t(:project_already_exists)
+        redirect_to project_path(project), flash[:notice] = t(:project_already_exists)
       end
     else
-      redirect_to root_path
-      flash[:error] = t(:unable_to_match_url)
+      redirect_to root_path, flash[:error] = t(:unable_to_match_url)
     end
   end
 
