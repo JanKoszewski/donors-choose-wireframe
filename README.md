@@ -7,6 +7,9 @@ Donors Team 6
 
 ### Install Pre-release Bundler -- don't worry -- this is safe!
 
+(this is because we need to run heroku with ruby 1.9.3, and bundler now
+supports a `ruby` keyword in the Gemfile)
+
 2. `gem install bundler --pre`
 
 3. `bundle`
