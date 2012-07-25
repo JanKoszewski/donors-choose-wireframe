@@ -20,8 +20,6 @@ class ChallengesController < ApplicationController
 
   def show
     @challenge = Challenge.find(params[:id])
-    @challenge_evidence = @challenge.challenge_evidences.new
-    @challenge_evidences = @challenge.challenge_evidences
   end
 
   def find_project

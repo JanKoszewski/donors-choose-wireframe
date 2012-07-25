@@ -49,8 +49,8 @@
     </div>
 
     <div class="sixcol last">
-      <% if @challenge_evidences.any? %>
-        <% @challenge_evidences.each do |evidence| %>
+      <% if @challenge.challenge_evidences.any? %>
+        <% @challenge.challenge_evidences.each do |evidence| %>
           <div class="challenge-evidence">
             <% if evidence.image_url %>
               <%= image_tag(evidence.image_url) %>
