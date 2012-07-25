@@ -11,17 +11,14 @@ class ProjectsController < ApplicationController
       if project.new_record?
         project.set_attrs_from_donors_choose(url)
         redirect_to new_project_challenge_path(:project_id => project.id)
-        flash[:notice] = "Thanks for adopting this project! To kick this party
-          off right, create a new challenge!"
+        flash[:notice] = t(:new_project)
       else
         redirect_to project_path(project)
-        flash[:notice] = "This project already exists. You can contribute
-         to it here!"
+        flash[:notice] = t(:project_already_exists)
       end
     else
       redirect_to root_path
-      flash[:error] = "Sorry, we are unable to match the URL with a
-       Donors Choose project"
+      flash[:error] = t(:unable_to_match_url)
     end
   end
 

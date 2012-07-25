@@ -14,3 +14,6 @@ en:
       challenge:
         display_media: "Photo or Video"
         title: "Challenge Title"
+  unable_to_match_url: "Sorry, we are unable to match the URL with a Donors Choose project"
+  project_already_exists: "This project already exists. You can contribute to it here!"
+  new_project: "Thanks for adopting this project! To kick this party off right, create a new challenge!"
